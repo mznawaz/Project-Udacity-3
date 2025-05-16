@@ -12,8 +12,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - apt-get update -y
-      - apt-get install -y docker.io
+      - yum update -y
+      - yum install -y docker.io
       - docker --version
       - $(aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com)
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/project-udacity-3
