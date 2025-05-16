@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - sudo yum update -y
+      - sudo yum install -y amazon-linux-extras
       - sudo amazon-linux-extras enable docker
       - sudo yum install docker -y
       - sudo service docker start
