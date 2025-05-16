@@ -29,6 +29,6 @@ phases:
       - echo Writing image definition file...
       - echo "[{\"name\":\"$Code_Buld_Project\",\"imageUri\":\"$REPOSITORY_URI:$IMAGE_TAG\"}]" > imagedefinitions.json
       
-  artifacts:
-    files:
-      - imagedefinitions.json     
+artifacts:
+  files:
+    - imagedefinitions.json  
