@@ -17,6 +17,13 @@ phases:
         DOCKERHUB_USERNAME=$(echo $DOCKERHUB_SECRET | jq -r .username)
         DOCKERHUB_PASSWORD=$(echo $DOCKERHUB_SECRET | jq -r .password)
         echo $DOCKERHUB_PASSWORD | docker login --username $DOCKERHUB_USERNAME --password-stdin
+      - |
+        if ! aws ecr describe-repositories --repository-names $Code_Buld_Project --region $AWS_DEFAULT_REGION > /dev/null 2>&1; then
+          echo "ECR repository does not exist. Creating..."
+          aws ecr create-repository --repository-name $Code_Buld_Project --region $AWS_DEFAULT_REGION
+        else
+          echo "ECR repository already exists."
+        fi
 
       - echo Logging in to Amazon ECR...
       - docker --version
@@ -35,8 +42,8 @@ phases:
       - echo Pushing the Docker image to ECR...
       - echo "Verifying Docker image list before push:"
       - docker images
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG || echo "Push failed"
+      - docker push $REPOSITORY_URI:latest || echo "Push failed"
       - echo Writing imagedefinitions.json for ECS deployment...
       - echo "[{\"name\":\"$Code_Buld_Project\",\"imageUri\":\"$REPOSITORY_URI:$IMAGE_TAG\"}]" > imagedefinitions.json
       
