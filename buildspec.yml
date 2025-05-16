@@ -26,10 +26,9 @@ phases:
       - echo Pushing the Docker image to ECR...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - docker push $REPOSITORY_URI:latest
-  artifacts:
-  files:
-    - imagedefinitions.json
-
-  post_build:
-    commands:
+      - echo Writing image definition file...
       - echo "[{\"name\":\"$Code_Buld_Project\",\"imageUri\":\"$REPOSITORY_URI:$IMAGE_TAG\"}]" > imagedefinitions.json
+      
+  artifacts:
+    files:
+      - imagedefinitions.json     
