@@ -5,22 +5,15 @@ env:
     AWS_DEFAULT_REGION: "us-east-1"  # Replace with your actual region
     AWS_ACCOUNT_ID: "949829287785"  # Replace with your actual AWS account ID
     Code_Buld_Project: "project-udacity-3"
-    REPO_URI: "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$Code_Buld_Project"
     IMAGE_TAG: "latest"
 
 phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - sudo yum update -y
-      - sudo yum install docker -y
-      - sudo service docker start
-      - sudo usermod -aG docker ec2-user
-
       - docker --version
-      - $(aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com)
-      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/project-udacity-3
-      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/project-udacity-3
+      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$Code_Buld_Project
 
   build:
     commands:
@@ -33,3 +26,10 @@ phases:
       - echo Pushing the Docker image to ECR...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - docker push $REPOSITORY_URI:latest
+  artifacts:
+  files:
+    - imagedefinitions.json
+
+  post_build:
+    commands:
+      - echo "[{\"name\":\"$Code_Buld_Project\",\"imageUri\":\"$REPOSITORY_URI:$IMAGE_TAG\"}]" > imagedefinitions.json
