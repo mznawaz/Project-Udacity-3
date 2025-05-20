@@ -21,6 +21,8 @@ Task 2 -
 
 1.) Minkube cluster creation
 
+![image](https://github.com/user-attachments/assets/f51c01b3-a06f-4e47-9b14-d8a8a24fc5a2)
+
 
 2.) run yaml 
 
