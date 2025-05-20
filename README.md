@@ -10,16 +10,16 @@ Task 2 -
 
 1.) Minkube cluster creation
 2.) run yaml 
-kubectl apply -f postgres-secrets.yml
-kubectl apply -f postgres-config.yml
-kubectl apply -f postgres-pv.yml
-kubectl apply -f postgres-pvc.yml
-kubectl apply -f postgres-deployment.yml
-kubectl apply -f postgres-service.yml
-kubectl apply -f app-secrets.yml
-kubectl apply -f app-config.yml
-kubectl apply -f app-deployment.yml
-kubectl apply -f app-service.yml
+-- --- --- kubectl apply -f postgres-secrets.yml
+-- --- --- kubectl apply -f postgres-config.yml
+-- --- --- kubectl apply -f postgres-pv.yml
+-- --- --- kubectl apply -f postgres-pvc.yml
+-- --- --- kubectl apply -f postgres-deployment.yml
+-- --- --- kubectl apply -f postgres-service.yml
+-- --- --- kubectl apply -f app-secrets.yml
+-- --- --- kubectl apply -f app-config.yml
+-- --- --- kubectl apply -f app-deployment.yml
+-- --- --- kubectl apply -f app-service.yml
 
 
 Issues -
