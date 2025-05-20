@@ -59,6 +59,7 @@ postgres            ClusterIP   10.110.157.243   <none>        5432/TCP         
 
 project-udacity-3   NodePort    10.96.200.226    <none>        8080:30080/TCP   3m52s
 
+![EC2-Black-1-Minikube-resources](https://github.com/user-attachments/assets/fb627072-8d86-45be-9e6d-4d66b2f2ee29)
 
 Issues -
 
