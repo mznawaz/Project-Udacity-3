@@ -1,5 +1,7 @@
 # Project-Udacity-3
 URL - http://54.205.142.199:30080/
+![Web-URL-Nodeport-page](https://github.com/user-attachments/assets/a58346b3-b6d2-4abd-a8e8-29676ebfb811)
+
 
 Task 1 - 
 
@@ -59,7 +61,12 @@ postgres            ClusterIP   10.110.157.243   <none>        5432/TCP         
 
 project-udacity-3   NodePort    10.96.200.226    <none>        8080:30080/TCP   3m52s
 
+Screenshots - 
 ![EC2-Black-1-Minikube-resources](https://github.com/user-attachments/assets/fb627072-8d86-45be-9e6d-4d66b2f2ee29)
+![Describe svc postgres](https://github.com/user-attachments/assets/991fb4b2-a297-466b-9eff-4c59f89eb51d)
+![Describe deploy service](https://github.com/user-attachments/assets/d615bae8-0b8d-4436-84cc-d0e2f6951acf)
+
+
 
 Issues -
 
