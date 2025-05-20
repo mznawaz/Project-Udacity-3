@@ -14,6 +14,8 @@ Task 1 -
 
 4.) Push the Docker image to AWS ECR
 
+![CodeBuild-Pipeline-3](https://github.com/user-attachments/assets/ee47c3c2-ada1-4766-a6e3-0eb5001f9cb2)
+
 
 Task 2 -
 
