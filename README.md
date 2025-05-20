@@ -31,20 +31,29 @@ Task 2 -
 
 -- --- --- kubectl apply -f postgres-deployment.yml
 
-
 -- --- --- kubectl apply -f postgres-service.yml
 
 -- --- --- kubectl apply -f app-secrets.yml
+
 -- --- --- kubectl apply -f app-config.yml
+
 -- --- --- kubectl apply -f app-deployment.yml
+
 -- --- --- kubectl apply -f app-service.yml
+
 NAME                                 READY   STATUS    RESTARTS   AGE
+
 postgres-6fd9668ccf-dgphh            1/1     Running   0          4m50s
+
 project-udacity-3-7d98c598b9-8dx4l   1/1     Running   0          4m13s
+
 ubuntu@ip-172-31-94-117:~/deployment$ kubectl get svc
 NAME                TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+
 kubernetes          ClusterIP   10.96.0.1        <none>        443/TCP          8m18s
+
 postgres            ClusterIP   10.110.157.243   <none>        5432/TCP         4m50s
+
 project-udacity-3   NodePort    10.96.200.226    <none>        8080:30080/TCP   3m52s
 
 
