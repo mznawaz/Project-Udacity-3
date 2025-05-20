@@ -55,6 +55,18 @@ spec:
                 secretKeyRef:
                   name: app-secrets
                   key: DB_PASSWORD
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
           resources:
             requests:
               memory: "256Mi"
@@ -62,15 +74,5 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "500m"
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 80
-            initialDelaySeconds: 10
-            periodSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 80
-            initialDelaySeconds: 30
-            periodSeconds: 10
+      imagePullSecrets:
+        - name: ecr-registry
