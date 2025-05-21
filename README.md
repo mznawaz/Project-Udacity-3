@@ -1,5 +1,5 @@
 # Project-Udacity-3
-URL - http://54.205.142.199:30080/
+URL - http://44.204.163.250:30080/
 ![Web-URL-Nodeport-page](https://github.com/user-attachments/assets/a58346b3-b6d2-4abd-a8e8-29676ebfb811)
 
 
