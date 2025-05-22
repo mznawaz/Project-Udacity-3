@@ -24,10 +24,10 @@ data:
         Merge_Log         On
         Keep_Log          Off
 
-    [FILTER]
-        Name              grep
-        Match             kube.*
-        Regex             container_name  project-udacity-3
+        #    [FILTER]
+        #Name              grep
+        #Match             kube.*
+        #Regex             container_name  project-udacity-3
 
 
     [OUTPUT]
@@ -36,4 +36,4 @@ data:
         region            us-east-1
         log_group_name    udacity-app-logs
         auto_create_group true
-        log_stream_prefix from-fluentbit-
+        log_stream_prefix project-udacity-  #this will create an event stream in AWS console cloud wath example - project-udacity-kube.var.log.containers.project-udacity-3-5d4cb7795c-t27gm_default_health-logger-82318fbf34f0407710e663cf587959458eb3a109eaabb8917fff8a486470e03f.log
