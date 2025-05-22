@@ -71,6 +71,19 @@ Screenshots -
 ![Describe deploy service](https://github.com/user-attachments/assets/d615bae8-0b8d-4436-84cc-d0e2f6951acf)
 
 
+Cloud watch commands - 
+
+kubectl create namespace logging
+
+kubectl apply -f fluent-bit-configmap.yaml
+
+kubectl apply -f fluent-bit-daemonset.yaml
+
+kubectl get serviceaccount fluent-bit-sa -n logging -o yaml
+
+![image](https://github.com/user-attachments/assets/5fdd2c7e-19a6-40b7-81f7-2d8c3ed9ab05)
+
+kubectl get pods -n logging
 
 Issues -
 
