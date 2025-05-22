@@ -18,6 +18,9 @@ Task 1 -
 
 5.) AWS Code connections added in order to run the codebuild on a Git PUSH
 
+![image](https://github.com/user-attachments/assets/ccf9a260-7bf9-49c9-ba80-6a263f99fc59)
+
+
 Task 2 -
 
 1.) Minkube cluster creation
