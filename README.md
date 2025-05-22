@@ -16,6 +16,7 @@ Task 1 -
 
 ![CodeBuild-Pipeline-3](https://github.com/user-attachments/assets/ee47c3c2-ada1-4766-a6e3-0eb5001f9cb2)
 
+5.) AWS Code connections added in order to run the codebuild on a Git PUSH
 
 Task 2 -
 
