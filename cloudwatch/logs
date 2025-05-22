@@ -1,0 +1,14 @@
+ubuntu@ip-172-31-94-117:~/deployment/cloudwatch$ sudo cat /var/log/pods/default_project-udacity-3-*/project-udacity-3/0.log | head -n 10
+
+
+
+{"log":"/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration\n","stream":"stdout","time":"2025-05-22T06:52:36.751188203Z"}
+{"log":"/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/\n","stream":"stdout","time":"2025-05-22T06:52:36.751216331Z"}
+{"log":"/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh\n","stream":"stdout","time":"2025-05-22T06:52:36.751718101Z"}
+{"log":"10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf\n","stream":"stdout","time":"2025-05-22T06:52:36.77537538Z"}
+{"log":"10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf\n","stream":"stdout","time":"2025-05-22T06:52:36.78608105Z"}
+{"log":"/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh\n","stream":"stdout","time":"2025-05-22T06:52:36.787358456Z"}
+{"log":"/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh\n","stream":"stdout","time":"2025-05-22T06:52:36.788122851Z"}
+{"log":"/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh\n","stream":"stdout","time":"2025-05-22T06:52:36.793913713Z"}
+{"log":"/docker-entrypoint.sh: Configuration complete; ready for start up\n","stream":"stdout","time":"2025-05-22T06:52:36.79392331Z"}
+{"log":"2025/05/22 06:52:36 [notice] 1#1: using the \"epoll\" event method\n","stream":"stderr","time":"2025-05-22T06:52:36.814883762Z"}
