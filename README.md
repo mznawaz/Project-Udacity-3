@@ -54,6 +54,9 @@ Task 2 -
 
 -- --- --- kubectl apply -f app-service.yml
 
+![Kubectl DB postgres SS](https://github.com/user-attachments/assets/699c6a89-3c6e-4fb6-bf69-8485246d5c55)
+
+
 NAME                                 READY   STATUS    RESTARTS   AGE
 
 postgres-6fd9668ccf-dgphh            1/1     Running   0          4m50s
