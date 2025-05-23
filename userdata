@@ -12,3 +12,4 @@ curl -LO "https://storage.googleapis.com/kubernetes-release/release/v1.23.0/bin/
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 sudo apt-get install awscli -y
+touch test
