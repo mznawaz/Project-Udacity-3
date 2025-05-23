@@ -89,6 +89,9 @@ kubectl get serviceaccount fluent-bit-sa -n logging -o yaml
 
 Please see the cloud watch application logs 
 
+![image](https://github.com/user-attachments/assets/c51827d7-8720-43b7-bae2-42364c3c7737)
+
+
 ![image](https://github.com/user-attachments/assets/ff5e4749-8d53-4267-b200-f0ad0fbcad40)
 
 
